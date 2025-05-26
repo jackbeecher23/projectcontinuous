@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WHOOP Callback</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>WHOOP Auth Callback</h1>
+  <p id="output">Waiting for code...</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    document.getElementById("output").textContent = code
+      ? `Code: ${code}`
+      : "No code found in URL.";
+  </script>
+</body>
+</html>
+
